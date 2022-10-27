@@ -14,7 +14,7 @@ This application uses SQL databases to insert, update, delete books
 ## How to install
 To clone repository use following command
 ```shell
-https://github.com/aditya-deshmukh-tech/library-management-mongodb.git
+https://github.com/aditya-deshmukh-tech/Spring-Boot-Library-Management-SQL.git
 ```
 
 once cloned create jar of project
@@ -27,14 +27,15 @@ This project requires 4 environment variables export them using following comman
 2. jwt_validity = for validity of jwt token
 3. jwt_refreshTokenValidity = validity of refresh token
 4. jwt_expiredTokenValidity = validity of expired token
-5. mongo_url = setting mongodb url
-6. mongo_port = setting mongodb port number
-7. mongo_db_name = setting mongodb database name
-8. mongo_params = for mongodb ssl params not needed in local development
+5. sql_url = setting sql url
+6. sql_username = setting sql username
+7. sql_password = setting sql password
+8. driver_class = for setting sql driver class
+9. database_dialect = for setting database dialect
 
 validities should be mentioned in milliseconds as default
 ```shell
-export jwt_secret=random jwt_validity=60000 jwt_refreshTokenValidity=60000 jwt_expiredTokenValidity=120000 mongo_url=mongodb://localhost mongo_port=27017 mongo_db_name=library mongo_params=""
+export jwt_secret=random jwt_validity=60000 jwt_refreshTokenValidity=60000 jwt_expiredTokenValidity=120000 sql_url=jdbc:h2:mem:library sql_username=sa sql_password=pass123 driver_class=org.h2.Driver database_dialect=org.hibernate.dialect.H2Dialect
 ```
 ## Run the project
 Once environment variables set run jar using following command
